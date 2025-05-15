@@ -13,22 +13,14 @@ Quem Somos: seção descritiva sobre a empresa com layout em duas colunas e bann
 
  Tecnologias Utilizadas
 HTML5
-
 CSS3
-
 Google Fonts – Rajdhani
 
 Responsividade com media queries
-
 Scroll suave com scroll-behavior: smooth
-
 Botão flutuante de voltar ao topo
-
 Estrutura de Arquivos
-bash
-Copiar
-Editar
-.
+
 ├── index.html
 ├── style.css
 ├── imagens/
@@ -40,26 +32,20 @@ Editar
 │   └── logo-runeterra.png
 
 Como Visualizar
-Clone ou baixe o repositório.
+Copie ou baixe o repositório.
 
 Coloque as imagens necessárias dentro da pasta imagens/.
-
 Abra o arquivo index.html no navegador de sua preferência.
 
 Funcionalidades em Destaque
 Botão "JOGUE AGORA" que redireciona para o site oficial do jogo.
-
 Formulário de Login com checkbox de “Manter logado”.
-
 Botão flutuante "Voltar ao Topo" aparece ao rolar a página.
-
 Layout adaptado para dispositivos móveis.
 
 Melhorias Futuras
 Implementar validação real de login com backend.
-
 Incluir animações usando JavaScript ou bibliotecas como AOS.
-
 Adicionar seção de cards com campeões ou funcionalidades do jogo.
 
 Preview(3 fotos):
@@ -77,33 +63,21 @@ This is a static landing page inspired by the universe of Legends of Runeterra, 
 
 Overview
 The interface includes three main sections:
-
 Header: with Riot Games logo, navigation menu, search field, and login button.
-
 Main: featured logo, welcome message, and a call-to-action button to play.
-
 Login: styled login form with background overlay.
-
 About Us: descriptive section about the company with side-by-side layout and a visual banner.
 
 Technologies Used
 HTML5
-
 CSS3
-
 Google Fonts – Rajdhani
-
 Responsive Design using media queries
-
 Smooth Scrolling via scroll-behavior: smooth
-
 Back to Top floating button
 
 Project Structure
-css
-Copiar
-Editar
-.
+
 ├── index.html
 ├── style.css
 ├── imagens/
@@ -114,31 +88,16 @@ Editar
 │   ├── icon-logoriot.png
 │   └── logo-runeterra.png
 How to View Locally
-Clone or download this repository.
+Copy or download this repository.
 
 Place all required images into the imagens/ folder.
 Open index.html in your browser.
 
 Features
 "PLAY NOW" button linking to the official Legends of Runeterra site
-
 Login form with “Keep me logged in” checkbox
-
 Floating "Back to Top" button that appears after scrolling
-
 Mobile-responsive layout with optimized display for small screens
-
-Deploy on GitHub Pages
-To publish this site using GitHub Pages:
-
-Push your project to a GitHub repository.
-
-Go to Settings > Pages in the repository.
-
-Under Source, select the main branch and /root folder.
-
-Click Save.
-Make sure all images are in the imagens/ folder and that paths are correct.
 
 Preview (3 pics):
 ![fotoprojeto1](https://github.com/user-attachments/assets/1a329014-66b4-4a61-bc9c-8fa91f92b420)
