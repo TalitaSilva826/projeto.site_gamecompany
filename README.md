@@ -1,4 +1,4 @@
-Este projeto é uma página estática inspirada no universo do jogo Legends of Runeterra, desenvolvido com HTML e CSS. A proposta é apresentar um visual moderno, com transições suaves, design responsivo e uma introdução interativa ao jogo.
+Este projeto é uma página estática inspirada no universo do jogo League of Legends + Legends of Runeterra, desenvolvido com HTML e CSS. A proposta é apresentar um visual moderno, com transições suaves, design responsivo e uma introdução interativa ao jogo.
 
 Visão Geral
 A interface é composta por três seções principais:
@@ -59,7 +59,7 @@ Feito com carinho por Talita Silva.
 - ENGLISH VERSION -
 
 Legends of Runeterra – Landing Page
-This is a static landing page inspired by the universe of Legends of Runeterra, built with HTML and CSS. It features a modern layout, smooth transitions, responsive design, and an interactive introduction to the game.
+This is a static landing page inspired by the universe of League of Legends + Legends of Runeterra, built with HTML and CSS. It features a modern layout, smooth transitions, responsive design, and an interactive introduction to the game.
 
 Overview
 The interface includes three main sections:
