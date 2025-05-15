@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legends of Runeterra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Rajdhani', sans-serif;
+    }
+
+    body, html {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: white;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    .background-fixo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('imagens/background.png') no-repeat center center / cover;
+      background-attachment: fixed;
+      z-index: -2;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.25) 25%,
+        rgba(0, 0, 0, 0.98) 100%
+      );
+      z-index: -1;
+    }
+
+    header {
+      z-index: 1;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: transparent;
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 1.4rem;
+      z-index: 1;
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      z-index: 1;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff007f;
+    }
+
+    .login-btn {
+      background: rgb(255, 11, 173);
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    .main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: calc(100vh - 80px);
+      padding: 20px 40px;
+      max-width: 500px;
+      color: white;
+      z-index: 1;
+      margin-top: 40px;
+    }
+
+    .main h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
+
+    .main p {
+      font-size: 1.2rem;
+      margin-top: 0;
+      margin-bottom: 30px;
+      line-height: 1.4;
+    }
+
+    .play-btn {
+      background: linear-gradient(to right, #ff007f, #ff66cc);
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      max-width: fit-content;
+      z-index: 1;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #ff66cc, 0 0 50px #ff007f;
+    }
+
+    .logo-runeterra {
+      width: 80%;
+      max-width: 200px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .main {
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        margin-top: 60px;
+      }
+    }
+
+    #login {
+      height: 100vh;
+      background: url('imagens/background-login.png') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    #login::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .login-box {
+      position: relative;
+      z-index: 2;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      color: black;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    .login-box label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      margin-top: 10px;
+      gap: 6px;
+    }
+
+    .login-box .login-submit {
+      background: #ff007f;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .login-box p {
+      font-size: 0.9rem;
+      margin-top: 15px;
+      color: #666;
+      cursor: pointer;
+    }
+
+    #toTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(to right, #ff007f, #ff66cc);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 999999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    #toTopBtn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #ff66cc, 0 0 50px #ff007f;
+    }
+
+    @media (max-width: 768px) {
+      #toTopBtn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+      }
+    }
+
+    .quemsomos-section {
+      position: relative;
+      background-color: #f3f3f3;
+      padding: 60px 40px;
+      color: #222;
+      overflow: hidden;
+    }
+
+    .quemsomos-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0) 30%,
+        rgba(0, 0, 0, 0.15) 80%,
+        rgba(0, 0, 0, 0.3) 100%
+      );
+      z-index: 1;
+    }
+
+    .quemsomos-content {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 0 auto 40px;
+      flex-wrap: wrap;
+    }
+
+    .quemsomos-icon {
+      width: 120px;
+      height: auto;
+    }
+
+    .quemsomos-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .quemsomos-text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .quemsomos-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .quemsomos-content,
+    .banner-quemsomos {
+      position: relative;
+      z-index: 2;
+    }
+
+    .banner-quemsomos {
+      width: 100vw;
+      margin-left: calc(-1 * (100vw - 100%) / 2);
+    }
+
+    .banner-quemsomos img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .banner-quemsomos .banner-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 100%);
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-fixo"></div> <!-- nao ficou fixo exatamente como queria mas enfim -->
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="toTopBtn" title="Voltar ao topo">↑</button>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("toTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          btn.style.opacity = "1";
+          btn.style.pointerEvents = "auto";
+        } else {
+          btn.style.opacity = "0";
+          btn.style.pointerEvents = "none";
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+  </script>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="imagens/riot-logo.png" alt="Riot Games" height="40" />
+    </div>
+    <nav>
+      <a href="#quemsomos">QUEM SOMOS</a>
+      <input type="text" placeholder="BUSCAR" style="padding: 6px; border-radius: 10px; border: none;">
+      <button class="login-btn" onclick="document.getElementById('login').scrollIntoView({ behavior: 'smooth' })">FAZER LOGIN</button>
+    </nav>
+  </header>
+
+  <!-- MAIN SECTION -->
+  <section class="main">
+    <img src="imagens/logo-runeterra.png" alt="Legends of Runeterra" class="logo-runeterra" />
+    <h1>Seja bem vindo a RUNETERRA!</h1>
+    <p>
+      Uma nova equipe foi formada, e você é o coringa. Viva o mais novo evento do LoR com uma nova mecânica que permite que você crie seu deck de acordo com qualquer Campeão.
+    </p>
+    <a href="https://playruneterra.com" target="_blank" class="play-btn">JOGUE AGORA</a>
+  </section>
+
+  <!-- LOGIN SECTION -->
+  <section id="login">
+    <div class="login-box">
+      <h2>Faça Login</h2>
+      <form onsubmit="handleLogin(event)">
+        <input type="text" id="usuario" placeholder="Nome de usuário" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+
+        <label>
+          <input type="checkbox" id="manter-logado"> Manter logado
+        </label>
+
+        <br />
+        <button type="submit" class="login-submit">→</button>
+        <p>Não consegue logar? Criar conta</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- QUEM SOMOS -->
+  <section id="quemsomos" class="quemsomos-section">
+    <div class="quemsomos-content">
+      <img src="imagens/icon-logoriot.png" alt="Ícone Quem Somos" class="quemsomos-icon" />
+      <div class="quemsomos-text">
+        <h2>QUEM SOMOS</h2>
+        <p>
+          A Legends foi fundada em 2006 com o objetivo de criar jogos e vivências que visam melhorar a experiência dos jogadores.
+          Desde então, crescemos e já somos mais de 4.500 Rioters em mais de 20 escritórios ao redor do mundo, trazendo uma perspectiva global
+          para os jogos que criamos e personagens que desenvolvemos.
+          Das ruas de Piltover aos laboratórios de radianita da Terra Alfa,
+          adoramos criar jogos e servir as pessoas que os consomem.
+        </p>
+      </div>
+    </div>
+    <div class="banner-quemsomos">
+      <img src="imagens/banner.png" alt="Banner Quem Somos">
+      <div class="banner-overlay"></div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const linkQuemSomos = document.querySelector('a[href="#quemsomos"]');
+      const target = document.getElementById("quemsomos");
+
+      linkQuemSomos.addEventListener("click", (e) => {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+
+</body>
+</html>
