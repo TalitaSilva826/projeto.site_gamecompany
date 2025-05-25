@@ -1,4 +1,3 @@
-OBS: Ignorar arquivo style.css (não faz parte do projeto)
 
 Este projeto é uma página estática inspirada no universo do jogo League of Legends + Legends of Runeterra, desenvolvido com HTML e CSS. A proposta é apresentar um visual moderno, com transições suaves, design responsivo e uma introdução interativa ao jogo.
 
