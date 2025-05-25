@@ -52,11 +52,11 @@ Preview(3 fotos):
 ![fotoprojeto2](https://github.com/user-attachments/assets/750b282c-94e7-45b4-bc11-c0762b42caa8)
 ![fotoprojeto3](https://github.com/user-attachments/assets/a2bc5fe1-1d98-43e5-94f6-62289f5c8f50)
 
-Feito com carinho por Talita Silva.
+
 
 - ENGLISH VERSION -
 
-Legends of Runeterra – Landing Page
+Legends of Runeterra – Landing Page:
 This is a static landing page inspired by the universe of League of Legends + Legends of Runeterra, built with HTML and CSS. It features a modern layout, smooth transitions, responsive design, and an interactive introduction to the game.
 
 
@@ -101,6 +101,6 @@ Preview (3 pics):
 ![fotoprojeto2](https://github.com/user-attachments/assets/750b282c-94e7-45b4-bc11-c0762b42caa8)
 ![fotoprojeto3](https://github.com/user-attachments/assets/a2bc5fe1-1d98-43e5-94f6-62289f5c8f50)
 
-Made with love by Talita Silva.
+
 
 
