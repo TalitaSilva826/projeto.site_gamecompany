@@ -2,26 +2,23 @@ OBS: Ignorar arquivo style.css (não faz parte do projeto)
 
 Este projeto é uma página estática inspirada no universo do jogo League of Legends + Legends of Runeterra, desenvolvido com HTML e CSS. A proposta é apresentar um visual moderno, com transições suaves, design responsivo e uma introdução interativa ao jogo.
 
-Visão Geral
+
 A interface é composta por três seções principais:
 
 Header: com logo da Riot Games, barra de navegação, campo de busca e botão de login.
-
 Main: destaque com o logo do jogo, chamada principal e botão de ação para jogar agora.
-
 Login: formulário estilizado para entrada de usuário, com efeito de sobreposição de fundo.
-
 Quem Somos: seção descritiva sobre a empresa com layout em duas colunas e banner ilustrativo.
 
- Tecnologias Utilizadas
+Tecnologias Utilizadas:
 HTML5
 CSS3
 Google Fonts – Rajdhani
-
 Responsividade com media queries
 Scroll suave com scroll-behavior: smooth
 Botão flutuante de voltar ao topo
-Estrutura de Arquivos
+
+Estrutura de Arquivos:
 
 ├── index.html
 ├── style.css
@@ -33,9 +30,8 @@ Estrutura de Arquivos
 │   ├── icon-logoriot.png
 │   └── logo-runeterra.png
 
-Como Visualizar
-Copie ou baixe o repositório.
 
+Copie ou baixe o repositório.
 Coloque as imagens necessárias dentro da pasta imagens/.
 Abra o arquivo index.html no navegador de sua preferência.
 
@@ -63,14 +59,14 @@ Feito com carinho por Talita Silva.
 Legends of Runeterra – Landing Page
 This is a static landing page inspired by the universe of League of Legends + Legends of Runeterra, built with HTML and CSS. It features a modern layout, smooth transitions, responsive design, and an interactive introduction to the game.
 
-Overview
+
 The interface includes three main sections:
 Header: with Riot Games logo, navigation menu, search field, and login button.
 Main: featured logo, welcome message, and a call-to-action button to play.
 Login: styled login form with background overlay.
 About Us: descriptive section about the company with side-by-side layout and a visual banner.
 
-Technologies Used
+Technologies Used:
 HTML5
 CSS3
 Google Fonts – Rajdhani
@@ -89,9 +85,8 @@ Project Structure
 │   ├── riot-logo.png
 │   ├── icon-logoriot.png
 │   └── logo-runeterra.png
-How to View Locally
-Copy or download this repository.
 
+Copy or download this repository.
 Place all required images into the imagens/ folder.
 Open index.html in your browser.
 
